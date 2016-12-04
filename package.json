@@ -1,0 +1,25 @@
+{
+  "name": "lighting-simulator",
+  "version": "1.0.0",
+  "description": "Home automation lighting simulator.",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm run test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/keremulutas/lighting-simulator.git"
+  },
+  "keywords": [
+    "home-automation",
+    "simulator",
+    "d3js",
+    "expressjs"
+  ],
+  "author": "Kerem Ulutaş",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/keremulutas/lighting-simulator/issues"
+  },
+  "homepage": "https://github.com/keremulutas/lighting-simulator#readme"
+}
