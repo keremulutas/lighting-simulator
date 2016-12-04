@@ -1,0 +1,20 @@
+extends layout
+
+block content
+    h1= title
+
+    if bulbCount
+        div.resetForm
+            form(name="bulbCountForm", method="post")
+                div.actions
+                    input(type="submit", name="submit", value="reset")
+        div.setupInfo
+            span.label Here is the bulb count:
+            span.bulbCount #{bulbCount}
+    else
+        form(name="bulbCountForm", method="post")
+            div.input
+                span.label Please enter bulb count:
+                input(type="number", name="bulbCount")
+            div.actions
+                input(type="submit", name="submit", value="submit")
