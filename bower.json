@@ -1,0 +1,31 @@
+{
+    "name": "lighting-simulator",
+    "version": "0.0.0",
+    "homepage": "https://github.com/keremulutas/lighting-simulator",
+    "authors": [
+        "Kerem Ulutaş <kerem@ulutas.gen.tr>"
+    ],
+    "moduleType": [
+        "amd"
+    ],
+    "license": "GPL-3.0",
+    "ignore": [
+        "**/.*",
+        "node_modules",
+        "bower_components"
+    ],
+    "dependencies": {
+        "jquery": "~3.1.1",
+        "lodash": "~4.17.2",
+        "bootstrap": "~3.3.7",
+        "d3": "~4.4.0",
+        "fontawesome": "~4.7.0",
+        "lato-webfont": "~1.1.2",
+        "socket.io-client": "~1.7.1"
+    },
+    "devDependencies": {
+        "jasmine": "~2.5.2",
+        "jasmine-jquery": "~2.1.1",
+        "jasmine-ajax": "~3.2.0"
+    }
+}

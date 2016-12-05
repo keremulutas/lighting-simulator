@@ -2,6 +2,17 @@ doctype html
 html
     head
         title= title
+        script(type="text/javascript", src="/bower_components/jquery/dist/jquery.min.js")
+        script(type="text/javascript", src="/bower_components/bootstrap/dist/js/bootstrap.min.js")
+        link(rel="stylesheet", href="/bower_components/lato-webfont/css/lato-webfont.min.css")
+        link(rel="stylesheet", href="/bower_components/bootstrap/dist/css/bootstrap.min.css")
+        link(rel="stylesheet", href="/bower_components/bootstrap/dist/css/bootstrap-theme.min.css")
+        link(rel="stylesheet", href="/bower_components/fontawesome/css/font-awesome.min.css")
         link(rel="stylesheet", href="/stylesheets/style.css")
+        script(type="text/javascript", src="/bower_components/socket.io-client/dist/socket.io.min.js")
+        script(type="text/javascript", src="/javascripts/ws.js")
+        block scripts
     body
-        block content
+        div.row
+            div.col-md-8.col-md-offset-2
+                block content

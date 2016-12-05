@@ -6,13 +6,10 @@ var cookieParser = require("cookie-parser");
 var bodyParser = require("body-parser");
 
 var app = express();
-var expressWs = require("express-ws")(app);
 
 var index = require("./routes/index");
 var operation = require("./routes/operation");
-var ws_routes = require("./routes/ws");
 
-app.use("/ws", ws_routes);
 app.locals.bulbCount = null;
 
 // view engine setup

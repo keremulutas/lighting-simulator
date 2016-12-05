@@ -1,13 +1,23 @@
 extends layout
 
+block scripts
+    script(type="text/javascript", src="/javascripts/operation.js")
+
 block content
     h1= title
 
     if globalData.bulbCount
         div.resetForm
-            form(name="bulbCountForm", method="post")
-                div.actions
-                    input(type="submit", name="submit", value="reset")
-        div.setupInfo
-            span.label Here is the bulb count:
-            span.bulbCount #{globalData.bulbCount}
+            form(id="applicationResetForm", method="post")
+                input#type(type="hidden", name="type", value="resetApplication")
+                button.btn.btn-danger(type="submit") Reset Application
+
+        div.row
+            each data, bulbId in globalData.bulbData
+                div.col-md-2.col-lg-2.col-xs-6
+                    div.bulb(class={"bulb-off": !data.isOn, "bulb-on": data.isOn}, data-bulb-id=bulbId)
+                        div.countdown.hidden
+                            div.wrapper
+                                div.pie.spinner
+                                div.pie.filler
+                                div.mask

@@ -14,8 +14,17 @@ router.get("/", function(req, res, next) {
 });
 
 router.post("/", function(req, res, next) {
-    if (req.body.submit === "submit") {
+    if (req.body.type === "setBulbCount") {
         req.app.locals.bulbCount = req.body.bulbCount;
+        req.app.locals.bulbData = {};
+        for (var i=0; i < req.body.bulbCount; i++) {
+            req.app.locals.bulbData["" + i] = {
+                isOn: false,
+                lastCommandTimestamp: 0,
+            };
+        }
+
+        req.app.locals.io.emit("bulbCountSet");
         res.redirect("/operation");
     }
 });

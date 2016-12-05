@@ -1,12 +1,14 @@
 extends layout
 
 block content
-    h1= title
+    div.row
+        div.col-md-6
+            h1= title
 
     unless globalData.bulbCount
         form(name="bulbCountForm", method="post")
-            div.input
-                span.label Please enter bulb count:
-                input(type="number", name="bulbCount")
-            div.actions
-                input(type="submit", name="submit", value="submit")
+            div.form-group
+                label(for="bulbCount") Please enter bulb count:
+                input#bulbCount(type="number", name="bulbCount", value="11")
+                input#type(type="hidden", name="type", value="setBulbCount")
+            button.btn.btn-info(type="submit") Submit

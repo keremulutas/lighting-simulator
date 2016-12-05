@@ -1,12 +1,9 @@
-var express = require("express");
+module.exports = function(io) {
+    io.on("connection", function(socket) {
+        console.log("client connected");
 
-var router = express.Router();
-
-router.ws("/echo", function(ws, req) {
-    ws.on("message", function(msg) {
-        console.log("İŞTE İŞTE İŞTE:", msg);
-        ws.send(msg);
+        socket.on("disconnect", function(){
+            console.log("client disconnected");
+        });
     });
-});
-
-module.exports = router;
+};
